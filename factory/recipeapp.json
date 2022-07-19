@@ -1,9 +1,0 @@
-{
-	"name": "recipeapp",
-	"location": "westeurope",
-	"identity": {
-		"type": "SystemAssigned",
-		"principalId": "3d9fd56e-50aa-4f06-b094-428ef982bb79",
-		"tenantId": "bcc3e605-9450-4f43-bd26-69bde322f080"
-	}
-}
