@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://recipeapp2.database.windows.net:1433;database=recipeapp;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: recipeapp@recipeapp2
+    password: Bootcamp123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      dialect : org.hibernate.dialect.SQLServer2012Dialect
+
+server:
+  port: 9191
+
+
