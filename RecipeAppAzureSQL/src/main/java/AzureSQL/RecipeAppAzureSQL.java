@@ -15,16 +15,28 @@ import java.util.List;
 public class RecipeAppAzureSQL {
 
     @Autowired
-    private RecipeRepo repo;
+    private RecipeRepo recipeRepo;
 
     @PostMapping("/addrecipe")
     public Recipe addRecipe(@RequestBody Recipe recipe) {
-        return repo.save(recipe);
+        return recipeRepo.save(recipe);
     }
 
     @GetMapping("/recipes")
     public List<Recipe> getRecipes() {
-        return repo.findAll();
+        return recipeRepo.findAll();
+    }
+
+    @Autowired
+    private IngredientsRepo ingrRepo;
+    @PostMapping("/addingredient")
+    public Ingredients addIngredients(@RequestBody Ingredients ingredients) {
+        return ingrRepo.save(ingredients);
+    }
+
+    @GetMapping("/ingredients")
+    public List<Ingredients> getIngredients() {
+        return ingrRepo.findAll();
     }
 
     public static void main(String[] args) {
